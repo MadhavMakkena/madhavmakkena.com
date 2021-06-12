@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  height: 100%;
+}
+
+#name {
+  width: 10vw;
+  min-height: 100vh;
+  padding: 2vw;
+}
+
+h1  {
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 0;
+  font-size: 100px;
+  white-space: nowrap;
+  line-height: 100%;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+h1 #firstname {
+  -webkit-text-fill-color: transparent;
+  background: radial-gradient(circle, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
+  background-clip: text;
+}
+
+h1 span:last-child {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(354deg, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
+  background-clip: text;
+}
+
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 60px;
+  }
+}

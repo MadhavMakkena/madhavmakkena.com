@@ -7,24 +7,26 @@
 
 let active = 0;
 let numPets = 0;
+let numContainers = 0;
 
 function getRandom(min, max) {
   return Math.floor((Math.random() * (max - min) + min));
 }
 
 (function() {
-  function makePetActive(number) {
-    const oldActive = document.getElementsByClassName('active')[0];
+  function makePetActive(number, id) {
+    const oldActive = document.querySelector(`#photo-${id} .active`);
+    console.log(oldActive);
     oldActive.classList.remove('active');
     setTimeout(() => {
-      const elem = document.getElementById(`pet-${number}`);
+      const elem = document.getElementById(`pet-${number}-${id}`);
       elem.classList.add('active');
     }, getRandom(0.5, 1) * 1000);
   }
 
-  function cyclePets() {
-    makePetActive(getRandom(0, numPets - 1));
-    setTimeout(cyclePets, getRandom(3,6) * 1000)
+  function cyclePets(id) {
+    console.log(id);
+    makePetActive(getRandom(0, numPets - 1), id);
   }
 
   fetch('/photos.txt')
@@ -33,15 +35,21 @@ function getRandom(min, max) {
       const petsList = pets.split('\n');
       petsList.pop();
       numPets = petsList.length;  
-      const container = document.getElementsByClassName('photos-container')[0];
+      const containers = document.getElementsByClassName('photos-container');
+      numContainers = containers.length;
       petsList.forEach((pet, index) => {
-        const img = document.createElement('img');
-        img.src = `/photos/${pet}`;
-        img.id = `pet-${index}`;
-        if (index === 0) img.className = 'active';
-        container.appendChild(img);
+        for (let i = 0; i < numContainers; i++) {
+          const img = document.createElement('img');
+          img.src = `/photos/${pet}`;
+          img.id = `pet-${index}-${i}`;
+          if (index === 0) img.className = 'active';
+          containers[i].appendChild(img);
+        }
       });
       
-      setTimeout(cyclePets, getRandom(3,6) * 1000);
+      for (let i = 0; i < numContainers; i++) {
+        cyclePets(i);
+        setInterval(() => cyclePets(i), getRandom(2000,10000));
+      }
     });
 })();

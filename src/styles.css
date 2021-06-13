@@ -1,12 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   height: 100%;
 }
 
 #name {
-  width: 10vw;
-  min-height: 100vh;
-  padding: 2vw;
+  width: 150px;
+  padding: 25px;
+  box-shadow: 2px 5px 16px 0px #0B325E;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
 }
 
 h1  {
@@ -26,15 +34,56 @@ h1 #firstname {
   background-clip: text;
 }
 
-h1 span:last-child {
+h1 #lastname {
   -webkit-text-fill-color: transparent;
   background: linear-gradient(354deg, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
   background-clip: text;
 }
 
+@media screen and (max-width: 1300px) {
+  h1 {
+    font-size: 80px;
+  }
+  #name {
+    width: 130px;
+    padding: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 55px;
+  }
+  #name {
+    width: 95px;
+    padding: 22px;
+    border-top-right-radius: 22px;
+    border-bottom-right-radius: 22px;
+  }
+}
 
 @media screen and (max-width: 500px) {
   h1 {
-    font-size: 60px;
+    font-size: 40px;
+  }
+  #name {
+    width: 80px;
+    padding: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 30px;
+  }
+  #name {
+    width: 54px;
+    padding: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
   }
 }

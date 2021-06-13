@@ -5,8 +5,8 @@
   "scripts": {
     "listphotos": "ls ./src/photos > ./src/photos.txt",
     "dev": "concurrently \"serve -d src\" \"yarn dev:build\"",
-    "dev:build": "yarn listphotos && esbuild ./src/index.js --bundle --minify --watch --outfile=./src/bundle.js",
-    "build": "yarn listphotos && esbuild ./src/index.js --bundle --minify --outfile=./src/bundle.js",
+    "dev:build": "yarn listphotos && esbuild ./src/pets/index.js --bundle --minify --watch --outfile=./src/pets/bundle.js",
+    "build": "yarn listphotos && esbuild ./src/pets/index.js --bundle --minify --outfile=./src/pets/bundle.js",
     "deploy": "gh-pages deploy -d src"
   },
   "repository": {

@@ -14,7 +14,7 @@ body {
   grid-template-columns: repeat(3, 300px);
   grid-template-rows: repeat(2, 300px);
   grid-gap: 25px;
-  transform: translate(0, 30%);
+  transform: translate(0, 20%);
 
 }
 

@@ -7,33 +7,6 @@ body {
   height: 100%;
 }
 
-iframe { 
-
-}
-
-.sidebyside {
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: repeat(2, 300px);
-  transform: translate(0, 15%);
-}
-
-.overlay { 
-  position:absolute;
-  font: size 20px;; 
-  top: 50px;; 
-  left:50px; 
-  z-index:2 
-}
-
-.preview {
-  width:300px; height:300px;
-  transform:scale(.5);
-  transform-origin:0 0; 
-  border:5px solid blue;
-  margin:0 0 -300px 0;
-}
-
-
 #name {
   width: 120px;
   padding: 20px;
@@ -43,7 +16,6 @@ iframe {
   margin-top: 2vw;
   margin-bottom: 2vw;
   background: radial-gradient(circle at right, rgba(170,61,250,0.1) 0%, rgba(98,85,223,0.1) 63%, rgba(56,99,207,0.1) 82%, rgba(50,116,181,0.1) 100%);
-
 }
 
 h1  {

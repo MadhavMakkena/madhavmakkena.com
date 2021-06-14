@@ -8,20 +8,21 @@ body {
 }
 
 #name {
-  width: 150px;
-  padding: 25px;
+  width: 120px;
+  padding: 20px;
   box-shadow: 2px 5px 16px 0px #0B325E;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   margin-top: 2vw;
   margin-bottom: 2vw;
+  background: radial-gradient(circle at right, rgba(170,61,250,0.1) 0%, rgba(98,85,223,0.1) 63%, rgba(56,99,207,0.1) 82%, rgba(50,116,181,0.1) 100%);
 }
 
 h1  {
   text-align: left;
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin: 0;
-  font-size: 100px;
+  font-size: 80px;
   white-space: nowrap;
   line-height: 100%;
   writing-mode: vertical-rl;
@@ -30,23 +31,23 @@ h1  {
 
 h1 #firstname {
   -webkit-text-fill-color: transparent;
-  background: radial-gradient(circle, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
+  background: radial-gradient(circle at right, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
   background-clip: text;
 }
 
 h1 #lastname {
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(354deg, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
+  background: radial-gradient(circle at bottom, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
   background-clip: text;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1500px) {
   h1 {
-    font-size: 80px;
+    font-size: 70px;
   }
   #name {
     width: 130px;
-    padding: 25px;
+    padding: 30px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
   }

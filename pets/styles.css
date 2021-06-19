@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  background: radial-gradient(circle, rgba(106,70,44,0.6) 0%, rgba(164,106,94,0.6) 13%, rgba(164,106,94,0.6) 25%, rgba(162,102,79,0.6) 38%, rgba(199,149,113,0.6) 57%, rgba(206,171,135,0.6) 78%, rgba(207,193,147,0.6) 100%);
 }
 
 .container {

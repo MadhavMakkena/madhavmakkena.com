@@ -14,85 +14,60 @@ body {
 }
 
 
-#name {
-  /* width: 120px; */
-  /* padding: 20px; */
-  /* box-shadow: 2px 5px 16px 0px #0B325E; */
-  /* border-top-right-radius: 20px; */
-  /* border-bottom-right-radius: 20px; */
+#menu {
+  position: relative;
   margin-top: 2vw;
   margin-left: 2vw;
-  /* margin-bottom: 2vw; */
-  /* background: radial-gradient(circle at right, rgba(170,61,250,0.1) 0%, rgba(98,85,223,0.1) 63%, rgba(56,99,207,0.1) 82%, rgba(50,116,181,0.1) 100%); */
+  width: 90px;
+  height: 90px;
+  background: black;
+  border-radius: 16px;
+  box-shadow: 5px 5px 15px 0px rgba(0,0,0,0.40);
 }
 
-h1  {
-  text-align: left;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin: 0;
-  font-size: 80px;
-  white-space: nowrap;
-  line-height: 100%;
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
+#doublem, #hamburger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: opacity .5s;
 }
 
-h1 #firstname {
-  -webkit-text-fill-color: transparent;
-  background: radial-gradient(circle at right, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
-  background-clip: text;
+.invisible {
+  opacity: 0 !important;
 }
 
-h1 #lastname {
-  -webkit-text-fill-color: transparent;
-  background: radial-gradient(circle at bottom, rgba(170,61,250,1) 0%, rgba(98,85,223,1) 63%, rgba(56,99,207,1) 82%, rgba(50,116,181,1) 100%);
-  background-clip: text;
+#credit {
+  position: absolute;
+  bottom: 0.5vw;
+  right: 1.5vw;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12t;
+  color:rgba(9, 9, 9, 0.4);
+  text-decoration: none;
 }
 
-@media screen and (max-width: 1500px) {
-  h1 {
-    font-size: 70px;
-  }
-  #name {
-    width: 130px;
-    padding: 30px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-  }
+/* unvisited link */
+#credit a:link {
+  color: rgba(9, 9, 9, 0.4);
+  text-decoration: none;
 }
 
-@media screen and (max-width: 850px) {
-  h1 {
-    font-size: 55px;
-  }
-  #name {
-    width: 95px;
-    padding: 22px;
-    border-top-right-radius: 22px;
-    border-bottom-right-radius: 22px;
-  }
+/* visited link */
+#credit a:visited {
+  color: rgba(9, 9, 9, 0.4);
+  text-decoration: none;
 }
 
-@media screen and (max-width: 500px) {
-  h1 {
-    font-size: 40px;
-  }
-  #name {
-    width: 80px;
-    padding: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
+/* mouse over link */
+#credit a:hover {
+  color: rgba(9, 9, 9, 0.4);
+  background: rgba(90, 90, 90, 0.3);
+  text-decoration: none;
 }
 
-@media screen and (max-width: 350px) {
-  h1 {
-    font-size: 30px;
-  }
-  #name {
-    width: 54px;
-    padding: 12px;
-    border-top-right-radius: 12px;
-    border-bottom-right-radius: 12px;
-  }
+/* selected link */
+#credit a:active {
+  color: rgba(9, 9, 9, 0.4);
+  text-decoration: none;
 }

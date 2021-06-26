@@ -1,33 +1,26 @@
-function revealHamburger(delay = false) {
-  const reveal = () => {
-    doublem.classList.add('invisible');
-    hamburger.classList.remove('invisible');
-  }
-  if (delay) setTimeout(reveal, 0);
-  else reveal();
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Home from './pages/Home';
+import Pets from './pages/Pets';
+import './index.css';
 
-function hideHamburger() {
-  setTimeout(() => {
-    doublem.classList.remove('invisible');
-    hamburger.classList.add('invisible');
-  }, 1000);
-}
-
-
-window.addEventListener('load', () => {
-  const menu = document.querySelector('#menu');
-  const doublem = document.querySelector('#doublem');
-  const hamburger = document.querySelector('#hamburger');
-
-  console.log(menu, doublem, hamburger);
-
-  const revealTimeout = setTimeout(hideHamburger, 3000);
-
-  menu.addEventListener('mouseenter', () => {
-    if (revealTimeout) clearTimeout(revealTimeout);
-    revealHamburger(true);
-  });
-
-  menu.addEventListener('mouseleave', hideHamburger);
-});
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+      <Switch>
+        <Route path="/pets">
+          <Pets />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+);

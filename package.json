@@ -1,13 +1,11 @@
 {
   "name": "pets",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "pets",
   "scripts": {
-    "listphotos": "ls ./src/photos > ./src/photos.txt",
-    "dev": "concurrently \"serve -d src\" \"yarn dev:build\"",
-    "dev:build": "yarn listphotos && esbuild ./src/pets/index.js --bundle --minify --watch --outfile=./src/pets/bundle.js",
-    "build": "yarn listphotos && esbuild ./src/pets/index.js --bundle --minify --outfile=./src/pets/bundle.js",
-    "deploy": "gh-pages deploy -d src"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "deploy": "yarn build && gh-pages deploy -d src"
   },
   "repository": {
     "type": "git",
@@ -16,13 +14,29 @@
   "author": "madhav.makkena@gmail.com",
   "license": "MIT",
   "devDependencies": {
-    "concurrently": "^6.0.2",
-    "esbuild": "^0.11.14",
-    "eslint": "^7.25.0",
-    "gh-pages": "^3.1.0",
-    "serve": "^11.3.2"
+    "gh-pages": "^3.1.0"
   },
   "dependencies": {
-    "glob": "^7.1.6"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

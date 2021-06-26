@@ -1,65 +1,47 @@
-body {
-  margin: 0;
-}
-
-.container {
+#pets {
   width: 100vw;
   height: auto;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 50px 0px;
+}
+
+#pets #grid {
   display: grid;
   grid-template-columns: repeat(3, 300px);
   grid-template-rows: repeat(2, 300px);
   grid-gap: 25px;
-  transform: translate(0, 20%);
-
 }
 
 @media only screen and (max-width: 1120px) {
-  .container {
+  #pets #grid {
     grid-template-columns: repeat(3, 300px);
     grid-template-rows: repeat(2, 300px);
-    transform: translate(0, 15%);
   }
 }
 
 @media only screen and (max-width: 1024px) {
-  .container {
+  #pets #grid {
     grid-template-columns: repeat(3, 300px);
     grid-template-rows: repeat(2, 300px);
-    transform: translate(0, 10%);
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .container {
+  #pets #grid {
     grid-template-columns: repeat(2, 300px);
     grid-template-rows: repeat(3, 300px);
-    transform: translate(0, 0%);
   }
 }
 
 @media only screen and (max-width: 700px) {
-  .container {
+  #pets #grid {
     grid-template-columns: 300px;
     grid-template-rows: repeat(6, 300px);
-    transform: translate(0, 0%);
   }
-}
-
-h1 {
-  text-align: center;
-  font-family: sans-serif;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  background: rgba(255,255,255,0.5);
-  margin: 0;
-  padding: 16px 0;
-  z-index: 1;
 }
 
 .photos-container {
@@ -67,6 +49,9 @@ h1 {
   height: 300px;
   max-width: 100vw;
   position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 3px 3px 40px 1px rgba(0,0,0,0.47);
 }
 
 .photos-container > img {
@@ -76,11 +61,6 @@ h1 {
   position: absolute;
   top: 0px;
   left: 0px;
-  opacity: 0;
-  transition: opacity 500ms;
-  box-shadow: 3px 3px 40px 1px rgba(0,0,0,0.47);
-}
-
-.photos-container > img.active {
   opacity: 1;
+  transition: opacity 500ms;
 }

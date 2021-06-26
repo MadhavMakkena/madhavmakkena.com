@@ -1,23 +1,14 @@
-* {
-  box-sizing: border-box;
+#home {
+  height: 100vh;
+  background-image: url('./bg_dark.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+  padding: 2vw;
 }
-
-html {
-  overflow: hidden;
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  height: 100%;
-  overflow: auto;
-}
-
 
 #menu {
   position: relative;
-  margin-top: 2vw;
-  margin-left: 2vw;
   width: 90px;
   height: 90px;
   background: black;
@@ -35,6 +26,17 @@ body {
 
 .invisible {
   opacity: 0 !important;
+}
+
+#home #grid {
+  display: grid;
+  grid-template-columns: 90px auto;
+  grid-gap: 25px;
+}
+
+#link {
+  width: 300px;
+  height: 300px;
 }
 
 #credit {

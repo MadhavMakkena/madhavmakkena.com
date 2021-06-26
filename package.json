@@ -5,7 +5,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "yarn build && gh-pages deploy -d src"
+    "deploy": "yarn build && gh-pages deploy -d build"
   },
   "repository": {
     "type": "git",

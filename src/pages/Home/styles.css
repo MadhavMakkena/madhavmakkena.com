@@ -30,13 +30,15 @@
 
 #home #grid {
   display: grid;
-  grid-template-columns: 90px auto;
+  grid-template-columns: 90px 400px;
   grid-gap: 25px;
 }
 
-#link {
-  width: 300px;
-  height: 300px;
+.pets-button {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0px;
 }
 
 #credit {

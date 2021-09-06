@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import './styles.css';
 
 const rawPaths = {};
@@ -7,15 +9,6 @@ function importAll(r) {
 }
 importAll(require.context('./photos', false, /\.(JPG|jpe?g)$/));
 const images = Object.entries(rawPaths).map(module => module[1].default);
-
-const bgColours = [
-  'rgba(67, 100, 157, 0.9)',
-  'rgba(146 , 191, 139, 0.9)',
-  'rgba(234, 197, 80, 0.9)',
-  'rgba(228, 114, 96, 0.9)',
-  'rgba(213, 113, 195, 0.9)',
-  'rgba(71, 137, 177, 0.9)'
-];
 
 const getRandom = (min, max) => {
   return Math.floor((Math.random() * (max - min) + min));
@@ -37,7 +30,7 @@ export const RandomPetPhotoFrame = props => {
   }, [randomizeImage]);
 
   return (
-    <div className="photos-container">
+    <div className={classnames('photos-container', { 'large': props.large })}>
       <img 
         src={images[imageIndex]} 
         alt="pet"
@@ -46,24 +39,8 @@ export const RandomPetPhotoFrame = props => {
   );
 }
 
-const Pets = () => {
-  const [bgColour] = React.useState(bgColours[getRandom(0, bgColours.length - 1)]);
+RandomPetPhotoFrame.propTypes = {
+  large: PropTypes.bool
+};
 
-  return (
-    <div 
-      id="pets" 
-      style={{ background: bgColour }}
-    >
-      <div id="grid">
-        <RandomPetPhotoFrame />
-        <RandomPetPhotoFrame />
-        <RandomPetPhotoFrame />
-        <RandomPetPhotoFrame />
-        <RandomPetPhotoFrame />
-        <RandomPetPhotoFrame />
-      </div>
-    </div>
-  )
-}
-
-export default React.memo(Pets);
+export default RandomPetPhotoFrame;

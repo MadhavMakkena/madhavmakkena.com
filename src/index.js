@@ -6,16 +6,12 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './pages/Home';
-import Pets from './pages/Pets';
 import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Switch>
-        <Route path="/pets">
-          <Pets />
-        </Route>
         <Route path="/">
           <Home />
         </Route>

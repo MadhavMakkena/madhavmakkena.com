@@ -1,10 +1,22 @@
 #home {
-  height: 100vh;
-  background-image: url('./bg_dark.svg');
+  flex: 1;
+  background-image: url('./Dark_background.svg');
   background-repeat: no-repeat;
   background-attachment: fixed; 
   background-size: cover;
   padding: 2vw;
+}
+
+#title {
+  text-align: center;
+  font-family: 'Lobster', Georgia Bold Italic, serif, sans-serif;
+  font-size: 40pt;
+  color:rgba(255, 255, 255);
+  text-decoration: none;
+}
+
+#title p {
+  margin: 0;
 }
 
 #menu {
@@ -43,17 +55,17 @@
 
 #credit {
   position: absolute;
-  bottom: 0.5vw;
-  right: 1.5vw;
+  bottom: 1vw;
+  right: 2.5vw;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 12t;
-  color:rgba(9, 9, 9, 0.4);
+  font-size: 12pt;
+  color:rgba(255, 255, 255, 0.75);
   text-decoration: none;
 }
 
 /* unvisited link */
 #credit a:link {
-  color: rgba(9, 9, 9, 0.4);
+  color: rgba(255, 255, 255, 0.75);
   text-decoration: none;
 }
 

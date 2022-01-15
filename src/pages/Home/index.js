@@ -23,8 +23,11 @@ const Home = () => {
 
   return (
     <div id="home">
+      <div id="title">
+        <p>Madhav Makkena</p>
+      </div>
       <div id="grid">
-        <div 
+        {/* <div 
           id="menu"
           onMouseEnter={showHamburger}
           onMouseLeave={hideHamburger}
@@ -47,7 +50,7 @@ const Home = () => {
             width="90px" 
             height="auto"
           />
-        </div>
+        </div> */}
         {/* <button onClick={() => setPetsModalOpen(true)} className="pets-button"> */}
           <RandomPetPhotoFrame large />
         {/* </button> */}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Pets from '../PetsGrid';
+import PetsGrid from '../PetsGrid';
 import './styles.css'
 
 const PetsModal = props => {
@@ -13,7 +13,7 @@ const PetsModal = props => {
   return (
     <div className="modal-bg" onClick={handleClick}>
       <div className="pets-modal">
-        <Pets />
+        <PetsGrid />
       </div>
     </div>
   );

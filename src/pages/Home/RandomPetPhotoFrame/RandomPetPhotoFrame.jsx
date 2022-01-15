@@ -7,7 +7,7 @@ const rawPaths = {};
 function importAll(r) {
   r.keys().forEach((key) => (rawPaths[key] = r(key)));
 }
-importAll(require.context('./photos', false, /\.(JPG|jpe?g)$/));
+importAll(require.context('./photos', false, /\.(JPE?G|jpe?g)$/));
 const images = Object.entries(rawPaths).map(module => module[1].default);
 
 const getRandom = (min, max) => {
@@ -20,9 +20,13 @@ export const RandomPetPhotoFrame = props => {
   const [imageIndex, setImageIndex] = React.useState(getRandom(0, images.length - 1))
 
   const randomizeImage = React.useCallback(() => {
-    setImageIndex(getRandom(0, images.length - 1));
+    let newImageIndex = getRandom(0, images.length - 1);
+    while (newImageIndex === imageIndex) {
+      newImageIndex = getRandom(0, images.length - 1);
+    }
+    setImageIndex(newImageIndex);
     timeout = setTimeout(randomizeImage, getRandom(2000, 10000))
-  }, []);
+  }, [imageIndex]);
 
   React.useEffect(() => {
     timeout = setTimeout(randomizeImage, getRandom(2000, 10000))

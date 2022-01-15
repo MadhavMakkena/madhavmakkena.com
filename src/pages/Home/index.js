@@ -48,13 +48,13 @@ const Home = () => {
             height="auto"
           />
         </div>
-        <button onClick={() => setPetsModalOpen(true)} className="pets-button">
+        {/* <button onClick={() => setPetsModalOpen(true)} className="pets-button"> */}
           <RandomPetPhotoFrame large />
-        </button>
+        {/* </button> */}
       </div>
-      {petsModalOpen && (
-        <PetsModal closeModal={() => setPetsModalOpen(false)} />
-      )}
+      {/* {petsModalOpen && ( */}
+        {/* <PetsModal closeModal={() => setPetsModalOpen(false)} /> */}
+      {/* )} */}
       <div id="credit">
         <p>Designed by Madhav Makkena and <a href="https://caven.codes">Geoff Caven</a></p>
       </div>

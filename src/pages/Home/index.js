@@ -23,8 +23,14 @@ const Home = () => {
 
   return (
     <div id="home">
-      <div id="title">
-        <p>Madhav Makkena</p>
+      <div id="top_row">
+        <div id="title">
+          <p>Madhav Makkena</p>
+        </div>
+        <div id="links">
+          <a href="https://www.linkedin.com/in/madhav-makkena/" target="_blank" rel="noopener noreferrer"><div id="links_linkedin"></div></a>
+          <a href="https://github.com/MadhavMakkena" target="_blank" rel="noopener noreferrer"><div id="links_github"></div></a>
+        </div>
       </div>
       <div id="grid">
         {/* <div 

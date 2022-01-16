@@ -10,6 +10,12 @@
 .photos-container.large {
   width: 400px;
   height: 400px;
+  transition: transform 1s;
+  margin-left: 2vw;
+}
+
+.photos-container.large:hover {
+  transform: scale(1.1);
 }
 
 .photos-container > img {
